@@ -28,7 +28,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class Joke(val id: Int, @SerializedName("joke") val text: String) : Parcelable {
-  constructor(parcel: Parcel) : this(parcel.readInt(), parcel.readString())
+  constructor(parcel: Parcel) : this(parcel.readInt(), parcel.readString() ?: "")
 
   override fun writeToParcel(parcel: Parcel, flags: Int) {
     parcel.writeInt(id)

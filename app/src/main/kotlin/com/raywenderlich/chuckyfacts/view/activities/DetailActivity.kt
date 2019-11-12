@@ -23,7 +23,7 @@
 package com.raywenderlich.chuckyfacts.view.activities
 
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import android.view.MenuItem
 import android.widget.TextView
 import com.raywenderlich.chuckyfacts.BaseApplication
@@ -104,7 +104,7 @@ class DetailActivity : BaseActivity(), DetailContract.View {
     super.onDestroy()
   }
 
-  override fun getToolbarInstance(): android.support.v7.widget.Toolbar? = toolbar
+  override fun getToolbarInstance(): androidx.appcompat.widget.Toolbar? = toolbar
 
   override fun showJokeData(id: String, joke: String) {
     tvId?.text = id
